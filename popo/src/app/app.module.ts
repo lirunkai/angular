@@ -4,19 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { FormComponent } from './form/form/form.component';
 import {RouterModule} from '@angular/router';
 import {routes} from './app.routes';
+import {FormModule} from "./form/form.module";
 
 @NgModule({
   declarations: [
-    AppComponent,
-    FormComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
+    FormModule,
     HttpModule
   ],
   providers: [],
