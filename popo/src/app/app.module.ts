@@ -6,18 +6,20 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {RouterModule} from '@angular/router';
 import {routes} from './app.routes';
-import {FormModule} from "./form/form.module";
+import {HomeComponent} from './home/home.component';
+import {FormPageModule} from "./pages/form/formpage.module";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes,{useHash: true}),
     FormsModule,
-    FormModule,
-    HttpModule
+    HttpModule,
+    FormPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
