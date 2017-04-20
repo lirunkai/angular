@@ -4,10 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import {RouterModule} from '@angular/router';
-import {routes} from './app.routes';
+import {AppRouting, AppRoutingProvidors} from './app.routes';
 import {HomeComponent} from './home/home.component';
-import {FormPageModule} from "./pages/form/formpage.module";
+import {BokeModule} from "./page/boke/boke.module";
 
 @NgModule({
   declarations: [
@@ -16,12 +15,12 @@ import {FormPageModule} from "./pages/form/formpage.module";
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes,{useHash: true}),
+    AppRouting,
     FormsModule,
     HttpModule,
-    FormPageModule
+    BokeModule
   ],
-  providers: [],
+  providers: [AppRoutingProvidors],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
