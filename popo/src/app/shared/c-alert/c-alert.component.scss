@@ -1,0 +1,55 @@
+.alert-wrap {
+  position: fixed;
+  top:0;
+  left:0;
+  right: 0;
+  bottom:0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .alert_box{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    .alert_header {
+      width: 100%;
+      height: 30px;
+      display: flex;
+      justify-content: space-between;
+      background: #02BAE2;
+      align-self: flex-start;
+      align-items: center;
+    }
+    .alert_content {
+      width: 100%;
+      padding: 10px;
+      background: #ffffff;
+      min-height: 30px;
+      font-size: 18px;
+      word-break: break-all;
+      text-indent: 2em;
+    }
+    .alert_footer {
+      width: 100%;
+      height: 30px;
+      background: #02BAE2;
+      align-self: flex-end;
+      .buttons{
+        width: 100px;
+        height: 30px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .btn {
+          backround: #ffffff;
+        }
+      }
+
+    }
+  }
+}
+

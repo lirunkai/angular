@@ -1,0 +1,22 @@
+<div class="alert-wrap" *ngIf="isShowAlert">
+  <div class="alert_box">
+    <div class="alert_header">
+      <span>{{title}}</span>
+      <span (click)="close()">X</span>
+    </div>
+    <div class="alert_content">
+      <p>
+        <ng-content></ng-content>
+      </p>
+    </div>
+    <div class="alert_footer">
+      <div class="buttons" *ngIf="one == '1'">
+        <button class="btn" (click)="confirmFn()">{{oneConfirm}}</button>
+      </div>
+      <div class="buttons" *ngIf="one == '2'">
+        <button class="btn" (click)="confirmFn()">{{confirm}}</button>
+        <button class="btn" (click)="cacelFn()">{{cancel}}</button>
+      </div>
+    </div>
+  </div>
+</div>

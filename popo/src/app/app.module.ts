@@ -6,19 +6,19 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {AppRouting, AppRoutingProvidors} from './app.routes';
 import {HomeComponent} from './home/home.component';
-import {BokeModule} from "./page/boke/boke.module";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRouting,
     FormsModule,
     HttpModule,
-    BokeModule
+    SharedModule
   ],
   providers: [AppRoutingProvidors],
   bootstrap: [AppComponent]

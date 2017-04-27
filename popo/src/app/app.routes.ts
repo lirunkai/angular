@@ -7,9 +7,8 @@ export const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'boke',
-    loadChildren: './page/boke/boke.module#BokeModule',
-    pathMatch: 'full'
+    path: 'directive',
+    loadChildren: './page/mydirective/mydirective.module#MydirectiveModule'
   },
   {
     path: '',

@@ -1,0 +1,5 @@
+
+<button (click)="showAlert()">Alert</button>
+<c-alert [title]="'this is warn message'" #shareAlert="ShareAlert" (onConfirm)="confirm()">
+  <span>{{msg}}</span>
+</c-alert>
