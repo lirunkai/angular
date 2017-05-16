@@ -1,5 +1,9 @@
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./home/home.component";
+import {LoginComponent} from "./page/login/login.component";
+import {LogoutComponent} from "./page/logout/logout.component";
+import {CenterComponent} from "./page/center/center.component";
+import {EditorComponent} from "./page/editor/editor.component";
 
 export const routes: Routes = [
   {
@@ -11,6 +15,22 @@ export const routes: Routes = [
     loadChildren: './page/mydirective/mydirective.module#MydirectiveModule'
   },
   {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'logout',
+    component: LogoutComponent
+  },
+  {
+    path: 'center',
+    component: CenterComponent
+  },
+  {
+    path: 'editor',
+    component: EditorComponent
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
@@ -19,4 +39,4 @@ export const routes: Routes = [
 
 export const AppRoutingProvidors: any[] = [];
 
-export const AppRouting = RouterModule.forRoot(routes)
+export const AppRouting = RouterModule.forRoot(routes, {useHash: true})
