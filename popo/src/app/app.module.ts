@@ -13,6 +13,8 @@ import { CenterComponent } from './page/center/center.component';
 import { EditorComponent } from './page/editor/editor.component';
 import {QuillEditorModule} from 'ngx-quill-editor';
 import { QuillEditorComponent } from './page/editor/quill-editor/quill-editor.component';
+import { QiniuComponent } from './page/qiniu/qiniu.component';
+import {NotificationsService} from "angular2-notifications/dist";
 
 
 @NgModule({
@@ -24,6 +26,7 @@ import { QuillEditorComponent } from './page/editor/quill-editor/quill-editor.co
     CenterComponent,
     EditorComponent,
     QuillEditorComponent,
+    QiniuComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { QuillEditorComponent } from './page/editor/quill-editor/quill-editor.co
     SharedModule,
     QuillEditorModule
   ],
-  providers: [AppRoutingProvidors],
+  providers: [AppRoutingProvidors, NotificationsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
