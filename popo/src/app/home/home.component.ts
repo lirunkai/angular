@@ -1,4 +1,5 @@
 import {Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {CAlertComponent} from "../shared/c-alert/c-alert.component";
 
 @Component({
   selector: 'app-home',
@@ -14,5 +15,10 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.renderer.setAttribute(this.render.nativeElement, 'id', 'asd')
   }
+  @ViewChild(CAlertComponent) myAlert: CAlertComponent;
 
+  showAlert(){
+    console.log(this.myAlert)
+    this.myAlert.show();
+  }
 }

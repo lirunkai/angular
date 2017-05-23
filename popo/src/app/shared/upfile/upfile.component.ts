@@ -52,7 +52,8 @@ export class UpfileComponent implements OnInit {
       // 上传选择的点选按钮，required
       browse_button: 'uploadFileBtn',
       // Ajax请求upToken的Url，**强烈建议设置**（服务端提供）
-      uptoken_url: `https://api.surmon.me/qiniu`,
+      //uptoken_url: `https://api.surmon.me/qiniu`,
+      uptoken: 'ibC9tNK4wN4jslsYqHdJ52AcDEyg5xQNLFbrK_wO:Bg_sGfYQK00yDKV5nQht7MrCdkM=:eyJzY29wZSI6Im1hZ2ljIiwiZGVhZGxpbmUiOjE0OTU1NzIyNzV9',
       // 默认 false，key为文件名。若开启该选项，SDK为自动生成上传成功后的key（文件名）。
       unique_names: false,
       // 默认 false。若在服务端生成uptoken的上传策略中指定了 `sava_key`，则开启，SDK会忽略对key的处理

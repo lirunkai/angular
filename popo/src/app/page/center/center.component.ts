@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CookieService} from "../../shared/cookie.service";
+declare var jquery: any;
 
 @Component({
   selector: 'app-center',
